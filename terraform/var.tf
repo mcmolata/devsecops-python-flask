@@ -13,12 +13,19 @@ variable "vm_password" {
   sensitive   = true                        
 }
 
-variable "ssh_public_key_path" {
-  description = "SSH public key"
-  default     = "/home/wirt/.ssh/id_ed25519.pub"
+variable "cmp_url" {
+  description = "CMP URL"
+  sensitive   = true                        
 }
-
-variable "ssh_private_key_path" {
-  description = "SSH private key"
-  default     = "/home/wirt/.ssh/id_ed25519"
+variable "cmp_token" {
+  description = "CMP token"
+  sensitive   = true                        
+}
+variable "cmp_secret" {
+  description = "CMP secret"
+  sensitive   = true                        
+}
+variable "ssh_private_key" {
+  description = "SSH Private KEY"
+  sensitive   = true                        
 }
