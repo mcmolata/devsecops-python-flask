@@ -27,7 +27,7 @@ resource "proxmox_vm_qemu" "terraform_vm" {
   }
 
     # upload file
-  provisioner "uploadfiles" {
+  provisioner "file" {
     source      = "/var/lib/jenkins/workspace/devsecopsdemo"  
     destination = "/home/devsecopsdemo" 
 
