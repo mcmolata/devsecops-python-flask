@@ -26,6 +26,7 @@ variable "cmp_secret" {
   sensitive   = true                        
 }
 variable "ssh_private_key" {
-  description = "SSH Private KEY"
+  type        = string
+  description = "The SSH private key to access the remote server"
   sensitive   = true                        
 }
