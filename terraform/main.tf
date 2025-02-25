@@ -35,7 +35,7 @@ resource "proxmox_vm_qemu" "terraform_vm" {
       type        = "ssh"
       user        = var.vm_user                  
       host        = "192.168.100.40"
-      private_key = file(var.ssh_private_key_path) 
+      private_key = var.ssh_private_key 
       timeout     = "5m"
     }
   }
@@ -53,7 +53,7 @@ resource "proxmox_vm_qemu" "terraform_vm" {
       type        = "ssh"
       user        = var.vm_user
       host        = "192.168.100.40"
-      private_key = file(var.ssh_private_key_path)
+      private_key = var.ssh_private_key
       timeout     = "5m"
     }
   }
