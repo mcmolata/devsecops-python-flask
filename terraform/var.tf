@@ -27,6 +27,5 @@ variable "cmp_secret" {
 }
 variable "ssh_private_key" {
   description = "VM ssh private key"
-  sensitive   = true                        
 
 }
