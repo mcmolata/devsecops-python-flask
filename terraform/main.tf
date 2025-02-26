@@ -45,6 +45,7 @@ resource "proxmox_vm_qemu" "terraform_vm" {
     inline = [
       "sudo pkill -9 apt-get",
       "sudo apt-get install -y docker.io",
+      "sudo apt-get install -y python3-pip",
       "sudo curl -L \"https://github.com/docker/compose/releases/download/v2.20.0/docker-compose-$(uname -s)-$(uname -m)\" -o /usr/local/bin/docker-compose",
       "sudo chmod +x /usr/local/bin/docker-compose",
       "cd /home/devsecopsdemo/ && sudo docker-compose -f docker-compose.yml up -d",
